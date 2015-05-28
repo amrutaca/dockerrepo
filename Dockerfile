@@ -1,4 +1,6 @@
-FROM java:8-jre
+FROM tomcat
+MAINTAINER xyz
 
-EXPOSE 8080
+ADD www.cumulogic.com/download/Apps/petstore.zip /usr/local/tomcat/webapps/
+
 CMD ["catalina.sh", "run"]
